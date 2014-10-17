@@ -128,6 +128,7 @@
 		276185DE19F0FA2B0093AC21 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185CB19F0FA2B0093AC21 /* UIProgressView+AFNetworking.m */; };
 		276185DF19F0FA2B0093AC21 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185CD19F0FA2B0093AC21 /* UIRefreshControl+AFNetworking.m */; };
 		276185E019F0FA2B0093AC21 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185CF19F0FA2B0093AC21 /* UIWebView+AFNetworking.m */; };
+		276185E319F10E2A0093AC21 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185E219F10E2A0093AC21 /* PlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,6 +339,8 @@
 		276185CD19F0FA2B0093AC21 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		276185CE19F0FA2B0093AC21 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		276185CF19F0FA2B0093AC21 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		276185E119F10E2A0093AC21 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		276185E219F10E2A0093AC21 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -527,6 +530,8 @@
 				185E778B19A2F37800EE8AA8 /* SearchViewController.m */,
 				18CD089719A5C5650058F3F7 /* DetailViewController.h */,
 				18CD089819A5C5650058F3F7 /* DetailViewController.m */,
+				276185E119F10E2A0093AC21 /* PlayerViewController.h */,
+				276185E219F10E2A0093AC21 /* PlayerViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 				1823352519AE1D880071DC98 /* SpecialItem.m in Sources */,
 				276185D119F0FA2B0093AC21 /* AFHTTPRequestOperationManager.m in Sources */,
 				189D4EA619A499C5004EA0B7 /* CommonTableViewCell.m in Sources */,
+				276185E319F10E2A0093AC21 /* PlayerViewController.m in Sources */,
 				182334EB19ADC7C40071DC98 /* MyTable.m in Sources */,
 				18BC8C1919A42A1B0096B203 /* UIButton+WebCache.m in Sources */,
 				276185DF19F0FA2B0093AC21 /* UIRefreshControl+AFNetworking.m in Sources */,

@@ -22,6 +22,7 @@
 #import "hntvLivItem.h"
 #import "AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
+#import "PlayerViewController.h"
 
 @interface LiveViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -128,6 +129,7 @@
     return cell;
 }
 
+//请求直播频道列表
 - (void)requestDataWithIndex:(int)index
 {
     NSString *urlString = [channelListURLArr objectAtIndex:index];
@@ -143,6 +145,13 @@
 - (void)cliked:(UIButton *)sender
 {
     NSLog(@"%d",sender.tag);
+    NSDictionary *dict = [downloadArr objectAtIndex:sender.tag];
+    NSString *url = [dict objectForKey:kPlayUrl];
+    NSLog(@"playurl:%@",url);
+    PlayerViewController *playerVC = [[PlayerViewController alloc] init];
+    playerVC.playerURL = url;
+    [self presentViewController:playerVC animated:YES completion:nil];
+//    [self.navigationController pushViewController:playerVC animated:YES];
 }
 
 //设置cell高度  2  5
