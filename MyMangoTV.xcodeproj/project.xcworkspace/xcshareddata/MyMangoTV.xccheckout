@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A6E56EC4-410F-435B-98B5-A7541715040D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MyMangoTV</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>841BBEBC49F975237AA742ED593ECC76343F7FD3</key>
+		<string>https://github.com/DiveinEdu/MyMangoTV.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MyMangoTV.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>841BBEBC49F975237AA742ED593ECC76343F7FD3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DiveinEdu/MyMangoTV.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>841BBEBC49F975237AA742ED593ECC76343F7FD3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>841BBEBC49F975237AA742ED593ECC76343F7FD3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyMangoTV</string>
+		</dict>
+	</array>
+</dict>
+</plist>
