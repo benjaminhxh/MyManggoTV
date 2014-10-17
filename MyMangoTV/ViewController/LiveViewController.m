@@ -28,6 +28,8 @@
     PaginationButton *button;
     UITableView *livetableView;
     NSArray *hnliveArray;
+    NSArray *channelListURLArr;
+    NSArray *downloadArr;
 }
 
 @end
@@ -46,18 +48,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    livetableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height)];
-    livetableView.dataSource = self;
-    livetableView.delegate = self;
-    [self.view addSubview:livetableView];
     
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 84)];
     title.text = @"直播";
     title.font = [UIFont systemFontOfSize:20];
     title.textColor = [UIColor whiteColor];
     title.textAlignment = 1;
     self.navigationItem.titleView = title;
-    
+    channelListURLArr = [NSArray arrayWithObjects:
+                         @"http://m.imgo.tv/json/phone//GetLive_SD.aspx?ClientName=IPhone&Type=HNTVLive",
+                         @"http://m.imgo.tv/json/phone//GetLive_SD.aspx?ClientName=IPhone&Type=OtherLive",
+                         @"http://m.imgo.tv/json/phone//GetLive_SD.aspx?ClientName=IPhone&Type=PayLive",
+                         @"http://m.imgo.tv/json/phone//GetLive_SD.aspx?ClientName=IPhone&Type=HNTVLive",
+                          nil];
     button = [[PaginationButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
     button.numberOfButton =4;
     [button setTitle: @[@"卫视台",@"地方台",@"付费台",@"收藏"]];
@@ -65,10 +68,16 @@
     button.Normalbgimage = [UIImage imageNamed:@"SegmentBackground.png"];
     button.Selectedbgimage = [UIImage imageNamed:@"SegmentBackgroundSelected.png"];
     button.selectedIndex = 0;
+    [self requestDataWithIndex:0];
     button.didSelectedAtIndex = ^(PaginationButton *sender, NSInteger index){
-        [livetableView reloadData];  //重新加载数据！！！
+        [self requestDataWithIndex:index];
     };
     [self.view addSubview:button];
+    
+    livetableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height-40)];
+    livetableView.dataSource = self;
+    livetableView.delegate = self;
+    [self.view addSubview:livetableView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRefresh:) name:kRefreshData object:nil];
 }
@@ -80,10 +89,17 @@
     [livetableView reloadData];
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 //表格的行数   1
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    if (downloadArr.count) {
+        return downloadArr.count;
+    }
+    return 0;
 }
 
 //3
@@ -97,63 +113,33 @@
     [cell.button setImage:[UIImage imageNamed:@"LivePlayButton.png"] forState:UIControlStateNormal];
     [cell.button addTarget:self action:@selector(cliked:) forControlEvents:UIControlEventTouchUpInside];
     cell.button.tag = indexPath.row;
-    
-    if (button.selectedIndex == 0) {
-        cell.name.text = @"湖南卫视";
-        cell.label.text = @"暂无节目信息";
-        cell.image.image =[UIImage imageNamed:@"0.jpg"];
-        NSString *urlString = [NSString stringWithFormat:@"http://m.imgo.tv/json/phone//GetLive_SD.aspx?ClientName=IPhone&Type=HNTVLive"];
-//        [self requestDataWith:urlString];
-        [[AFHTTPRequestOperationManager manager] POST:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSArray *downloadDict = (NSArray *)responseObject;
-            NSDictionary *dict = [downloadDict objectAtIndex:indexPath.row];
-            cell.name.text = [dict objectForKey:kChannelName];
-            NSArray *CurrentProgromArr = [dict objectForKey:kCurrentProgrom];
-            if (CurrentProgromArr.count) {
-                cell.label.text = [[CurrentProgromArr objectAtIndex:0] objectForKey:kProgromName];
-                
-            }else
-            {
-                cell.label.text = @"暂无节目信息";
-            }
-            NSString *imageUrl = [dict objectForKey:kPic];
-            [cell.image setImageWithURL:[NSURL URLWithString:imageUrl]];
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            
-        }];
-
+    NSDictionary *dict = [downloadArr objectAtIndex:indexPath.row];
+    cell.name.text = [dict objectForKey:kChannelName];
+    NSArray *CurrentProgromArr = [dict objectForKey:kCurrentProgrom];
+    if (CurrentProgromArr.count) {
+        cell.label.text = [[CurrentProgromArr objectAtIndex:0] objectForKey:kProgromName];
         
-    }
-    else if (button.selectedIndex == 1)
+    }else
     {
-        cell.name.text = @"节目啊节目";
-        cell.label.text = @"没有节目信息";
-        cell.image.image =[UIImage imageNamed:@"0.jpg"];
+        cell.label.text = @"暂无节目信息";
     }
-    else if (button.selectedIndex == 2)
-    {
-        cell.name.text = @"3";
-        cell.label.text = @"3";
-        cell.image.image =[UIImage imageNamed:@"0.jpg"];
-    }
-    else if (button.selectedIndex == 3)
-    {
-        cell.name.text = @"4";
-        cell.label.text = @"4";
-        cell.image.image =[UIImage imageNamed:@"0.jpg"];
-    }
-
+    NSString *imageUrl = [dict objectForKey:kPic];
+    [cell.image setImageWithURL:[NSURL URLWithString:imageUrl]];
     return cell;
 }
 
-//- (NSDictionary *)requestDataWith:(NSString *)url
-//{
-//    [[AFHTTPRequestOperationManager manager] POST:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSDictionary *dict = (NSDictionary *)responseObject;
-//        NSLog(@"dict:%@",dict);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//    }];
-//}
+- (void)requestDataWithIndex:(int)index
+{
+    NSString *urlString = [channelListURLArr objectAtIndex:index];
+    [[AFHTTPRequestOperationManager manager] POST:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        downloadArr = (NSArray *)responseObject;
+        [livetableView reloadData];  //重新加载数据！！！
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+
+}
 - (void)cliked:(UIButton *)sender
 {
     NSLog(@"%d",sender.tag);
@@ -167,6 +153,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     NSLog(@"%d",indexPath.row);
 }
 
