@@ -122,6 +122,9 @@
 		271B258B19F1FC3E009C2626 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258A19F1FC3E009C2626 /* libbz2.dylib */; };
 		271B258D19F209B7009C2626 /* libGzipCompressor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258C19F209B7009C2626 /* libGzipCompressor.a */; };
 		271B258E19F209B7009C2626 /* libGzipCompressor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258C19F209B7009C2626 /* libGzipCompressor.a */; };
+		2721462719F222BE00887D73 /* bofang_anniu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2721462419F222BE00887D73 /* bofang_anniu@2x.png */; };
+		2721462819F222BE00887D73 /* fanhui_jiantou@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2721462519F222BE00887D73 /* fanhui_jiantou@2x.png */; };
+		2721462919F222BE00887D73 /* zanting_anniu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2721462619F222BE00887D73 /* zanting_anniu@2x.png */; };
 		276185D019F0FA2B0093AC21 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185AC19F0FA2B0093AC21 /* AFHTTPRequestOperation.m */; };
 		276185D119F0FA2B0093AC21 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185AE19F0FA2B0093AC21 /* AFHTTPRequestOperationManager.m */; };
 		276185D219F0FA2B0093AC21 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185B019F0FA2B0093AC21 /* AFHTTPSessionManager.m */; };
@@ -339,6 +342,9 @@
 		271B258819F1FC31009C2626 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		271B258A19F1FC3E009C2626 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		271B258C19F209B7009C2626 /* libGzipCompressor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGzipCompressor.a; sourceTree = "<group>"; };
+		2721462419F222BE00887D73 /* bofang_anniu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bofang_anniu@2x.png"; sourceTree = "<group>"; };
+		2721462519F222BE00887D73 /* fanhui_jiantou@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui_jiantou@2x.png"; sourceTree = "<group>"; };
+		2721462619F222BE00887D73 /* zanting_anniu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zanting_anniu@2x.png"; sourceTree = "<group>"; };
 		276185AB19F0FA2B0093AC21 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		276185AC19F0FA2B0093AC21 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		276185AD19F0FA2B0093AC21 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -494,6 +500,7 @@
 		185E773D19A2F14E00EE8AA8 = {
 			isa = PBXGroup;
 			children = (
+				2721462319F222BE00887D73 /* imageIcon */,
 				27BEEC3419F206DE003B4C29 /* BaiduT5Player */,
 				27BEEC3219F20474003B4C29 /* Foundation.framework */,
 				27BEEC3019F20459003B4C29 /* QuartzCore.framework */,
@@ -729,6 +736,16 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		2721462319F222BE00887D73 /* imageIcon */ = {
+			isa = PBXGroup;
+			children = (
+				2721462419F222BE00887D73 /* bofang_anniu@2x.png */,
+				2721462519F222BE00887D73 /* fanhui_jiantou@2x.png */,
+				2721462619F222BE00887D73 /* zanting_anniu@2x.png */,
+			);
+			path = imageIcon;
+			sourceTree = "<group>";
+		};
 		276185AA19F0FA2B0093AC21 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +904,7 @@
 				182334FF19ADC9210071DC98 /* ImgoShareSelectedIcon@2x.png in Resources */,
 				1823350C19ADCB450071DC98 /* TabBarHomeChannelsSelectedIcon@2x.png in Resources */,
 				180D392119A6E47900E83BF2 /* VipIcon@2x.png in Resources */,
+				2721462919F222BE00887D73 /* zanting_anniu@2x.png in Resources */,
 				180D391B19A6E47900E83BF2 /* PartTabBarMVIcon@2x.png in Resources */,
 				180D391E19A6E47900E83BF2 /* TVIcon@2x.png in Resources */,
 				180D392019A6E47900E83BF2 /* VipCornerIcon@2x.png in Resources */,
@@ -906,6 +924,7 @@
 				185E77A619A2F44F00EE8AA8 /* TabBarRecommendIcon@2x.png in Resources */,
 				185E779F19A2F44F00EE8AA8 /* TabBarHomeBackground@2x.png in Resources */,
 				1823350019ADC9210071DC98 /* MoviesSelectedIcon@2x.png in Resources */,
+				2721462819F222BE00887D73 /* fanhui_jiantou@2x.png in Resources */,
 				180D391619A6E47900E83BF2 /* HuaerYuShaonianIcon.png in Resources */,
 				180D391719A6E47900E83BF2 /* ImgoShareIcon@2x.png in Resources */,
 				1873210319B1F69900F1714E /* LivePlayButton@2x.png in Resources */,
@@ -922,6 +941,7 @@
 				1823350319ADC9210071DC98 /* ProducerSelectedIcon@2x.png in Resources */,
 				180D391F19A6E47900E83BF2 /* TVProgramIcon@2x.png in Resources */,
 				180D391D19A6E47900E83BF2 /* TravelIcon@2x.png in Resources */,
+				2721462719F222BE00887D73 /* bofang_anniu@2x.png in Resources */,
 				185E775119A2F14E00EE8AA8 /* Images.xcassets in Resources */,
 				1823350E19ADCB450071DC98 /* TabBarHomeMoreSelectedIcon@2x.png in Resources */,
 				185E77A319A2F44F00EE8AA8 /* TabBarHomeMoreIcon@2x.png in Resources */,

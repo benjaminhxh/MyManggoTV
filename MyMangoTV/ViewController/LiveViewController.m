@@ -146,12 +146,13 @@
 {
     NSLog(@"%d",sender.tag);
     NSDictionary *dict = [downloadArr objectAtIndex:sender.tag];
+//    NSLog(@"dict:%@",dict);
     NSString *url = [dict objectForKey:kPlayUrl];
-    NSLog(@"playurl:%@",url);
+//    NSLog(@"playurl:%@",url);
     PlayerViewController *playerVC = [[PlayerViewController alloc] init];
     playerVC.playerURL = url;
+    playerVC.playerTitle = [dict objectForKey:kChannelName];
     [self presentViewController:playerVC animated:YES completion:nil];
-//    [self.navigationController pushViewController:playerVC animated:YES];
 }
 
 //设置cell高度  2  5

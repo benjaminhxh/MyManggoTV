@@ -19,8 +19,9 @@
 {
     CyberPlayerController *cbPlayerController;
     NSTimer *timer;
-    UIImageView *topView;
     UILabel *titleL;
+    BOOL topViewHidden;
+    UIImageView *bottomView,*topView;
 }
 @end
 
@@ -41,16 +42,16 @@
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
-//    //设置旋转动画
-//    [UIView beginAnimations:nil context:nil];
-//    [UIView setAnimationDuration:duration];
-//    //设置视图旋转
-//    self.view.bounds = CGRectMake(0, 0, kWidth,kHeight);
-//    ////NSLog(@"kwidth:%f===========,kheight:%f",kWidth,kHeight);
-//    self.view.transform = CGAffineTransformMakeRotation(M_PI_2);
-//    [UIView commitAnimations];
-//    self.view.backgroundColor = [UIColor whiteColor];
+    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
+    //设置旋转动画
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:duration];
+    //设置视图旋转
+    self.view.bounds = CGRectMake(0, 0, kWidth,kHeight);
+    NSLog(@"kwidth:%f===========,kheight:%f",kWidth,kHeight);
+    self.view.transform = CGAffineTransformMakeRotation(M_PI_2);
+    [UIView commitAnimations];
+    self.view.backgroundColor = [UIColor blackColor];
     
     //添加百度开发者中心应用对应的APIKey和SecretKey。
     //添加开发者信息
@@ -62,9 +63,9 @@
     //    NSString *SDKVerion = [cbPlayerController getSDKVersion];
     //    ////NSLog(@"SDKVersion:%@",SDKVerion);
     //设置视频显示的位置
-    UIView *videoView = [[UIView alloc] initWithFrame:CGRectMake(0, 24, kWidth, kHeight-24)];
-    [cbPlayerController.view setFrame: self.view.frame];
-    cbPlayerController.scalingMode = CBPMovieScalingModeFill;
+    UIView *videoView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, kHeight, kWidth-44)];
+    [cbPlayerController.view setFrame: videoView.frame];
+//    cbPlayerController.scalingMode = CBPMovieScalingModeFill;
     //将视频显示view添加到当前view中
     [self.view addSubview:cbPlayerController.view];
     
@@ -111,7 +112,6 @@
 
     //顶部条
     topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kHeight, 44)];
-    //    topView.image = [UIImage imageNamed:@"keyboard_number_bg@2x"];
     topView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
     topView.userInteractionEnabled = YES;
     [self.view addSubview:topView];
@@ -129,6 +129,9 @@
     titleL.font = [UIFont systemFontOfSize:12];
     titleL.text = self.playerTitle;
     [topView addSubview:titleL];
+
+    UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenOrNo:)];
+    [cbPlayerController.view addGestureRecognizer:tapGest];
 
     [self startPlayback];
 }
@@ -226,6 +229,8 @@
 }
 - (void)startPlayback{
     //    NSURL *url = [NSURL URLWithString:@"http://119.188.2.50/data2/video04/2013/04/27/00ab3b24-74de-432b-b703-a46820c9cd6f.mp4"];
+//    NSString *playerUrl = @"http://3g3u8.imgo.tv/ac611a4e049a0314941411b13351dd9c/5441e904/phone/g/phone/sdzm/s1/140914sjjhd.mp4/playlist.m3u8";
+//    NSURL *url = [NSURL URLWithString:playerUrl];
     NSURL *url = [NSURL URLWithString:self.playerURL];
     switch (cbPlayerController.playbackState) {
         case CBPMoviePlaybackStateStopped:
@@ -352,6 +357,25 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+//弹出或隐藏设置按钮
+- (void)hiddenOrNo:(id)sender
+{
+    if (topViewHidden) {
+
+        [UIView animateWithDuration:0.15 animations:^{
+            topView.frame = CGRectMake(0, -44, kHeight, 44);
+            bottomView.frame = CGRectMake(0, kWidth+60, kHeight, 60);
+        }];
+        topViewHidden = !topViewHidden;
+    }else{
+        [UIView animateWithDuration:0.15 animations:^{
+            topView.frame = CGRectMake(0, 0, kHeight, 44);
+            bottomView.frame = CGRectMake(0, kWidth-60, kHeight, 60);
+        }];
+        topViewHidden = !topViewHidden;
+    }
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
