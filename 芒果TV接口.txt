@@ -1,13 +1,13 @@
 1. 首页推荐
 http://m.imgo.tv/json/phone//GetTodayCommend_new.aspx?ClientName=IPhone
 
-2. 直播频道列表
+2. 直播频道列表（完整）
 http://m.imgo.tv/json/phone//GetLive_SD.aspx?ClientName=IPhone&Type=HNTVLive
 
-3. 地方台直播
+3. 地方台直播（完整）
 http://m.imgo.tv/json/phone//GetLive_SD.aspx?ClientName=IPhone&Type=OtherLive
 
-4. 付费频道
+4. 付费频道（完整）
 http://m.imgo.tv/json/phone//GetLive_SD.aspx?ClientName=IPhone&Type=PayLive
 
 5. 频道节目列表
@@ -46,10 +46,10 @@ http://m.imgo.tv/json/phone/GetActivityInfo.aspx?ActivityId=15&PageNo=1&t=140775
 16. 搜索热词
 http://m.imgo.tv/json/phone//GetHotSearchKey.aspx
 
-17. 搜索
+17. 搜索（完整）
 http://m.imgo.tv/json/phone//Search.aspx?flag=new&SearchKey=爸爸去哪儿
 
 
-18.首页播放地址拼接
+18.首页播放地址拼接 （完整）
 http://m.imgo.tv/json/phone//接得到的PlayUrl
 例如：http://m.imgo.tv/json/phone//geturl.aspx?tid=41366&cid=759835&MovieType=S
