@@ -26,6 +26,9 @@
 #import "VideoItem.h"
 #import "PartItem.h"
 #import "SpecialItem.h"
+#import "PlayerViewController.h"
+#import "AFNetworking.h"
+
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate, MyScrollViewDelegate, MyScrollViewDataSource>
 {
@@ -131,8 +134,9 @@
 {
     bannerArray = [[DVIDataManager sharedManager] flashData: NO];
     [bannerView reloadData];
-    
+//    NSLog(@"bannaerArr:%@",bannerArray);
     commendArray = [[DVIDataManager sharedManager] commendData];
+//    NSLog(@"commandArr:%@",commendArray);
     [homeTableView reloadData];
     
     [homeTableView.pullToRefreshView stopAnimating];
@@ -181,7 +185,7 @@
     TypeCommendItem *item = [commendArray objectAtIndex:indexPath.section];
     //获取section中subItem的数据
     NSArray *array = [item subItems];
-    
+//    NSLog(@"array:%@",array);
     //返回每个cell里面图片的个数
     cell.numberOfViewInCell = ^NSInteger(CommonTableViewCell *cCell){
         return array.count;
@@ -196,8 +200,10 @@
         
         if (item.UiPartType == 3) {
             VideoItem *video = [array objectAtIndex:index];
+//            NSLog(@"video.url:%@",video.PlayUrl);
             [v.imageView sd_setImageWithURL:[NSURL URLWithString:video.Pic]];
             v.label.text = video.Vname;
+//            NSLog(@"video.Vname:%@",video.Vname);
         }
         else if(item.UiPartType == 4){
             PartItem *part = [array objectAtIndex:index];
@@ -310,7 +316,37 @@
 
 - (void)scrollView:(MyScrollView *)scrollView didSelectAtIndex:(NSInteger)index
 {
+    //点击头部滚动视图之后
     NSLog(@"selected: %d", index);
+    PlayerViewController *playerVC = [[PlayerViewController alloc] init];
+
+    TypeCommendItem *item = [commendArray objectAtIndex:index];
+    NSArray *array = [item subItems];
+    NSLog(@"item.type:%d",item.UiPartType);
+    if (item.UiPartType == 3) {
+        VideoItem *video = [array objectAtIndex:index];
+        NSLog(@"video.url:%@",video.PlayUrl);
+        NSLog(@"video.Vname:%@",video.Vname);
+        NSLog(@"video.PublishTime:%@",video.PublishTime);
+        NSLog(@"video.SndlvlDesc:%@",video.SndlvlDesc);
+
+        playerVC.playerTitle = video.Vname;
+        NSLog(@"playTitle:%@",video.Vname);
+        NSString *prefixURL = @"http://m.imgo.tv/json/phone//";
+        NSString *playerURL = [prefixURL stringByAppendingString:video.PlayUrl];
+        NSLog(@"playerURl:%@",playerURL);
+        NSURL *url = [NSURL URLWithString:playerURL];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        [request setHTTPMethod:@"POST"];
+        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+        [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            NSString *urlStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"url:%@",urlStr);
+            playerVC.playerURL = urlStr;
+            [self presentViewController:playerVC animated:YES completion:nil];
+
+        }];
+    }
 }
 
 - (void)scrollViewDidEndScroll:(MyScrollView *)scrollView

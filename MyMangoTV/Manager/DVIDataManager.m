@@ -88,6 +88,7 @@
     
     //将数据从OC的基本数据类型转换自定义的数据类型，方便编译器进行提示和类型检查
     NSArray *flashArray = dict[@"FlashData"];
+//    NSLog(@"flashArr:%@",flashArray);
     NSMutableArray *array = [NSMutableArray array];
     for (NSDictionary *d in flashArray) {
         FlashItem *item = [FlashItem flashItem:d];
@@ -96,6 +97,7 @@
     _flashData = array;
     
     NSArray *typeArray = dict[@"TypeCommendData"];
+//    NSLog(@"typeArr:%@",typeArray);
     NSMutableArray *commendArray = [NSMutableArray array];
     for (NSDictionary *d in typeArray) {
         TypeCommendItem *item = [[TypeCommendItem alloc] initWithDict:d];
@@ -117,7 +119,7 @@
         [hntvLiveArray addObject:item];
     }
     _hntvLiveArray = hntvLiveArray;
-    
+//    NSLog(@"_hntvLiveArr:%@",_hntvLiveArray);
     [[NSNotificationCenter defaultCenter] postNotificationName:kRefreshData object:nil];
 }
 

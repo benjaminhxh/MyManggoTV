@@ -111,6 +111,8 @@
 		18DA10F119A425C10095D838 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA10F019A425C10095D838 /* MyScrollView.m */; };
 		18DAF86919A6ED15007B4FFF /* while.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DAF86819A6ED15007B4FFF /* while.png */; };
 		18DAF86D19A6F72A007B4FFF /* ProducerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DAF86C19A6F72A007B4FFF /* ProducerIcon@2x.png */; };
+		271555CE19F299D800E013DB /* collectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271555CC19F299D800E013DB /* collectCell.m */; };
+		271555CF19F299D800E013DB /* collectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271555CD19F299D800E013DB /* collectCell.xib */; };
 		271B257B19F1FBCD009C2626 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B257A19F1FBCD009C2626 /* OpenAL.framework */; };
 		271B257D19F1FBDC009C2626 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B257C19F1FBDC009C2626 /* CoreGraphics.framework */; };
 		271B257F19F1FBEF009C2626 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B257E19F1FBEF009C2626 /* OpenGLES.framework */; };
@@ -332,6 +334,9 @@
 		18DA10F019A425C10095D838 /* MyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
 		18DAF86819A6ED15007B4FFF /* while.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = while.png; sourceTree = "<group>"; };
 		18DAF86C19A6F72A007B4FFF /* ProducerIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ProducerIcon@2x.png"; sourceTree = "<group>"; };
+		271555CB19F299D800E013DB /* collectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = collectCell.h; path = MyMangoTV/Model/collectCell.h; sourceTree = SOURCE_ROOT; };
+		271555CC19F299D800E013DB /* collectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = collectCell.m; path = MyMangoTV/Model/collectCell.m; sourceTree = SOURCE_ROOT; };
+		271555CD19F299D800E013DB /* collectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = collectCell.xib; path = MyMangoTV/Model/collectCell.xib; sourceTree = SOURCE_ROOT; };
 		271B257A19F1FBCD009C2626 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		271B257C19F1FBDC009C2626 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		271B257E19F1FBEF009C2626 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -603,6 +608,9 @@
 				18CD089F19A5DF950058F3F7 /* MySegmentedControl.m */,
 				187320FF19B1F26400F1714E /* LiveTableViewCell.h */,
 				1873210019B1F26400F1714E /* LiveTableViewCell.m */,
+				271555CB19F299D800E013DB /* collectCell.h */,
+				271555CC19F299D800E013DB /* collectCell.m */,
+				271555CD19F299D800E013DB /* collectCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -920,6 +928,7 @@
 				185E77A219A2F44F00EE8AA8 /* TabBarHomeLiveIcon@2x.png in Resources */,
 				18BC8CB819A4984F0096B203 /* HomeMore@2x.png in Resources */,
 				180D391919A6E47900E83BF2 /* MusicsIcon@2x.png in Resources */,
+				271555CF19F299D800E013DB /* collectCell.xib in Resources */,
 				1823350F19ADCB450071DC98 /* TabBarHomeSearchSelectedIcon@2x.png in Resources */,
 				185E77A619A2F44F00EE8AA8 /* TabBarRecommendIcon@2x.png in Resources */,
 				185E779F19A2F44F00EE8AA8 /* TabBarHomeBackground@2x.png in Resources */,
@@ -972,6 +981,7 @@
 				1823352619AE1D880071DC98 /* TypeCommendItem.m in Sources */,
 				182334DF19AD85500071DC98 /* DVINetworkManager.m in Sources */,
 				1823352E19AE1E2C0071DC98 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				271555CE19F299D800E013DB /* collectCell.m in Sources */,
 				18BC8C1819A42A1B0096B203 /* SDWebImagePrefetcher.m in Sources */,
 				182334DD19AD85500071DC98 /* DVIDataManager.m in Sources */,
 				18CD08A019A5DF950058F3F7 /* MySegmentedControl.m in Sources */,

@@ -6,12 +6,16 @@
 //  Copyright (c) 2014年 戴维营教育. All rights reserved.
 //
 
+#define kHeight [UIScreen mainScreen].bounds.size.height
+#define kWidth  [UIScreen mainScreen].bounds.size.width
+
 #import "ChannelViewController.h"
 
 #import "CommonTableViewCell.h"
 #import "CategoryView.h"
+#import "collectCell.h"
 
-@interface ChannelViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ChannelViewController () <UITableViewDataSource, UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 {
     UITableView *_tableView;
     NSArray *_categoryArray;
@@ -57,8 +61,54 @@
     
     _imageArray = @[@"TVProgramIcon",@"NewsIcon",@"TVIcon",@"MoviesIcon",@"MusicsIcon",@"CartoonIcon",@"ProducerIcon",@"ImgoShareIcon",@"VipIcon",@"TravelIcon",@"HuaerYuShaonianIcon"];
 //    [self createTableView];
+    [self createCollectCell];
 }
 
+- (void)createCollectCell
+{
+    // 1.创建流水布局
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    // 2.设置每个格子的尺寸
+    layout.itemSize = CGSizeMake(kWidth/2-20, kWidth/2-20);
+    // 3.设置整个collectionView的内边距
+    CGFloat paddingY = 10;
+    CGFloat paddingX = 10;
+    layout.sectionInset = UIEdgeInsetsMake(paddingY, paddingX, paddingY, paddingX);//top/left/bottom/right
+    // 4.设置每一行之间的间距
+    layout.minimumLineSpacing = paddingY;
+//    layout.minimumInteritemSpacing = paddingY-5;
+    UICollectionView *collectV = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight-44)collectionViewLayout:layout];
+//    collectV.backgroundColor = [UIColor grayColor];
+    collectV.delegate = self;
+    collectV.dataSource = self;
+    static  NSString *cellIdentif = @"cell";
+//        [collectV registerClass:[channelCell class] forCellWithReuseIdentifier:cellIdentif];
+    [collectV registerNib:[UINib nibWithNibName:@"collectCell" bundle:nil] forCellWithReuseIdentifier:cellIdentif];
+    [self.view addSubview:collectV];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static  NSString *cellIdentif = @"cell";
+    collectCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentif forIndexPath:indexPath];
+    cell.cellImage.image = [UIImage imageNamed:[_imageArray objectAtIndex:indexPath.row]];
+//    cell.roseNum.frame = CGRectMake(kWidth/2-25, 15, kWidth/2-30, 24);
+    cell.roseNum.text = [_categoryArray objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if (_categoryArray.count) {
+        return _categoryArray.count;
+    }
+    return 0;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"index:%d----%d",indexPath.row,indexPath.section);
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -6,10 +6,15 @@
 //  Copyright (c) 2014年 戴维营教育. All rights reserved.
 //
 
+#define kHeight [UIScreen mainScreen].bounds.size.height
+#define kWidth  [UIScreen mainScreen].bounds.size.width
+
 #import "SearchViewController.h"
 
 @interface SearchViewController ()
-
+{
+    UITextField *searchF;
+}
 @end
 
 @implementation SearchViewController
@@ -27,9 +32,29 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor magentaColor];
+//    self.view.backgroundColor = [UIColor magentaColor];
+    searchF = [[UITextField alloc] initWithFrame:CGRectMake(20, 20, kWidth-70, 40)];
+    searchF.placeholder = @"请输入搜索关键词";
+    searchF.borderStyle = UITextBorderStyleLine;
+    self.navigationItem.titleView = searchF;
+    
+    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [searchBtn setImage:[UIImage imageNamed:@"TabBarHomeSearchSelectedIcon@2x"] forState:UIControlStateNormal];
+    searchBtn.frame = CGRectMake(kWidth-50, 20, 40, 40);
+    [searchBtn addTarget:self action:@selector(searchBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationItem.titleView addSubview:searchBtn];
+    
 }
 
+- (void)searchBtnAction
+{
+    [searchF resignFirstResponder];
+    NSString *searchURL = @"http://m.imgo.tv/json/phone//Search.aspx?flag=new&SearchKey=";
+    if (searchF.text.length) {
+        NSString *url = [searchURL stringByAppendingString:searchF.text];
+        
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

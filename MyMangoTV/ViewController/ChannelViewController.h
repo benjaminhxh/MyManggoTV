@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ChannelViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *chanelimageView;
+@property (weak, nonatomic) IBOutlet UILabel *channelTitle;
 
 @end

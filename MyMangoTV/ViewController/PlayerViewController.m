@@ -228,8 +228,8 @@
     [self stopPlayback];
 }
 - (void)startPlayback{
-    //    NSURL *url = [NSURL URLWithString:@"http://119.188.2.50/data2/video04/2013/04/27/00ab3b24-74de-432b-b703-a46820c9cd6f.mp4"];
-//    NSString *playerUrl = @"http://3g3u8.imgo.tv/ac611a4e049a0314941411b13351dd9c/5441e904/phone/g/phone/sdzm/s1/140914sjjhd.mp4/playlist.m3u8";
+    //    NSURL *url = [NSURL URLWithString:@"http://119.188.2.50/data2/video04/2013/04/27/00ab3b24-74de-432b-b703-a46820c9cd6f.mp4"];http://3g3u8.imgo.tv/5644fa689df8b02e961c799d59e27bc6/54422d69/phone/g/phone/sdzm/s1/140914sjjhd.mp4/playlist.m3u8
+//    NSString *playerUrl = @"http://3g3u8.imgo.tv/eaddc70361d389ca852be4a0ea8cd4b8/5442310b/phone/g/phone/sdzm/s1/140914sjjhd.mp4/playlist.m3u8";
 //    NSURL *url = [NSURL URLWithString:playerUrl];
     NSURL *url = [NSURL URLWithString:self.playerURL];
     switch (cbPlayerController.playbackState) {
