@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-54)];
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 160)];
     tableView.tableHeaderView = headerView;
     tableView.dataSource = self;

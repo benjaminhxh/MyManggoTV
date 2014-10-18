@@ -63,9 +63,9 @@
     //    NSString *SDKVerion = [cbPlayerController getSDKVersion];
     //    ////NSLog(@"SDKVersion:%@",SDKVerion);
     //设置视频显示的位置
-    UIView *videoView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, kHeight, kWidth-44)];
+    UIView *videoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kHeight, kWidth)];
     [cbPlayerController.view setFrame: videoView.frame];
-//    cbPlayerController.scalingMode = CBPMovieScalingModeFill;
+    cbPlayerController.scalingMode = CBPMovieScalingModeAspect_16_9;
     //将视频显示view添加到当前view中
     [self.view addSubview:cbPlayerController.view];
     

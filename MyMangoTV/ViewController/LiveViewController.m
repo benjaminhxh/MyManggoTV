@@ -75,7 +75,7 @@
     };
     [self.view addSubview:button];
     
-    livetableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height-40)];
+    livetableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height-164)];
     livetableView.dataSource = self;
     livetableView.delegate = self;
     [self.view addSubview:livetableView];
