@@ -56,7 +56,7 @@
     _categoryArray = @[@"综艺", @"新闻", @"电视剧", @"电影", @"音乐", @"动画片", @"出品方", @"爱芒果", @"VIP专区", @"旅游热点", @"花儿与少年"];
     
     _imageArray = @[@"TVProgramIcon",@"NewsIcon",@"TVIcon",@"MoviesIcon",@"MusicsIcon",@"CartoonIcon",@"ProducerIcon",@"ImgoShareIcon",@"VipIcon",@"TravelIcon",@"HuaerYuShaonianIcon"];
-    [self createTableView];
+//    [self createTableView];
 }
 
 - (void)didReceiveMemoryWarning

@@ -268,9 +268,14 @@
     return control;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"index.row:%d",indexPath.row);
+}
 - (void)didClickSection:(UIControl *)sender
 {
-    NSLog(@".....");
+    
+    NSLog(@".....%d",sender.selected);
 }
 
 #pragma mark - MyScrollViewDataSource

@@ -111,6 +111,17 @@
 		18DA10F119A425C10095D838 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA10F019A425C10095D838 /* MyScrollView.m */; };
 		18DAF86919A6ED15007B4FFF /* while.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DAF86819A6ED15007B4FFF /* while.png */; };
 		18DAF86D19A6F72A007B4FFF /* ProducerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DAF86C19A6F72A007B4FFF /* ProducerIcon@2x.png */; };
+		271B257B19F1FBCD009C2626 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B257A19F1FBCD009C2626 /* OpenAL.framework */; };
+		271B257D19F1FBDC009C2626 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B257C19F1FBDC009C2626 /* CoreGraphics.framework */; };
+		271B257F19F1FBEF009C2626 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B257E19F1FBEF009C2626 /* OpenGLES.framework */; };
+		271B258119F1FC05009C2626 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258019F1FC05009C2626 /* libz.dylib */; };
+		271B258319F1FC0E009C2626 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258219F1FC0E009C2626 /* AudioToolbox.framework */; };
+		271B258519F1FC17009C2626 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258419F1FC17009C2626 /* MobileCoreServices.framework */; };
+		271B258719F1FC24009C2626 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258619F1FC24009C2626 /* CFNetwork.framework */; };
+		271B258919F1FC31009C2626 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258819F1FC31009C2626 /* SystemConfiguration.framework */; };
+		271B258B19F1FC3E009C2626 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258A19F1FC3E009C2626 /* libbz2.dylib */; };
+		271B258D19F209B7009C2626 /* libGzipCompressor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258C19F209B7009C2626 /* libGzipCompressor.a */; };
+		271B258E19F209B7009C2626 /* libGzipCompressor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B258C19F209B7009C2626 /* libGzipCompressor.a */; };
 		276185D019F0FA2B0093AC21 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185AC19F0FA2B0093AC21 /* AFHTTPRequestOperation.m */; };
 		276185D119F0FA2B0093AC21 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185AE19F0FA2B0093AC21 /* AFHTTPRequestOperationManager.m */; };
 		276185D219F0FA2B0093AC21 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185B019F0FA2B0093AC21 /* AFHTTPSessionManager.m */; };
@@ -129,6 +140,21 @@
 		276185DF19F0FA2B0093AC21 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185CD19F0FA2B0093AC21 /* UIRefreshControl+AFNetworking.m */; };
 		276185E019F0FA2B0093AC21 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185CF19F0FA2B0093AC21 /* UIWebView+AFNetworking.m */; };
 		276185E319F10E2A0093AC21 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 276185E219F10E2A0093AC21 /* PlayerViewController.m */; };
+		27BEEC2F19F20408003B4C29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC2E19F20408003B4C29 /* UIKit.framework */; };
+		27BEEC3119F20459003B4C29 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3019F20459003B4C29 /* QuartzCore.framework */; };
+		27BEEC3319F20474003B4C29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3219F20474003B4C29 /* Foundation.framework */; };
+		27BEEC3C19F206DE003B4C29 /* libASIHTTP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3619F206DE003B4C29 /* libASIHTTP.a */; };
+		27BEEC3D19F206DE003B4C29 /* libASIHTTP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3619F206DE003B4C29 /* libASIHTTP.a */; };
+		27BEEC3E19F206DE003B4C29 /* libBase64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3719F206DE003B4C29 /* libBase64.a */; };
+		27BEEC3F19F206DE003B4C29 /* libBase64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3719F206DE003B4C29 /* libBase64.a */; };
+		27BEEC4019F206DE003B4C29 /* libCyberPlayerController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3819F206DE003B4C29 /* libCyberPlayerController.a */; };
+		27BEEC4119F206DE003B4C29 /* libCyberPlayerController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3819F206DE003B4C29 /* libCyberPlayerController.a */; };
+		27BEEC4219F206DE003B4C29 /* libCyberPlayerUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3919F206DE003B4C29 /* libCyberPlayerUtils.a */; };
+		27BEEC4319F206DE003B4C29 /* libCyberPlayerUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3919F206DE003B4C29 /* libCyberPlayerUtils.a */; };
+		27BEEC4419F206DE003B4C29 /* libReachability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3A19F206DE003B4C29 /* libReachability.a */; };
+		27BEEC4519F206DE003B4C29 /* libReachability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3A19F206DE003B4C29 /* libReachability.a */; };
+		27BEEC4619F206DE003B4C29 /* libSBJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3B19F206DE003B4C29 /* libSBJSON.a */; };
+		27BEEC4719F206DE003B4C29 /* libSBJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BEEC3B19F206DE003B4C29 /* libSBJSON.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -303,6 +329,16 @@
 		18DA10F019A425C10095D838 /* MyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
 		18DAF86819A6ED15007B4FFF /* while.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = while.png; sourceTree = "<group>"; };
 		18DAF86C19A6F72A007B4FFF /* ProducerIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ProducerIcon@2x.png"; sourceTree = "<group>"; };
+		271B257A19F1FBCD009C2626 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		271B257C19F1FBDC009C2626 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		271B257E19F1FBEF009C2626 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		271B258019F1FC05009C2626 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		271B258219F1FC0E009C2626 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		271B258419F1FC17009C2626 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		271B258619F1FC24009C2626 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		271B258819F1FC31009C2626 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		271B258A19F1FC3E009C2626 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		271B258C19F209B7009C2626 /* libGzipCompressor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGzipCompressor.a; sourceTree = "<group>"; };
 		276185AB19F0FA2B0093AC21 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		276185AC19F0FA2B0093AC21 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		276185AD19F0FA2B0093AC21 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -341,6 +377,16 @@
 		276185CF19F0FA2B0093AC21 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		276185E119F10E2A0093AC21 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		276185E219F10E2A0093AC21 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		27BEEC2E19F20408003B4C29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27BEEC3019F20459003B4C29 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		27BEEC3219F20474003B4C29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27BEEC3519F206DE003B4C29 /* CyberPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyberPlayerController.h; sourceTree = "<group>"; };
+		27BEEC3619F206DE003B4C29 /* libASIHTTP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libASIHTTP.a; sourceTree = "<group>"; };
+		27BEEC3719F206DE003B4C29 /* libBase64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBase64.a; sourceTree = "<group>"; };
+		27BEEC3819F206DE003B4C29 /* libCyberPlayerController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCyberPlayerController.a; sourceTree = "<group>"; };
+		27BEEC3919F206DE003B4C29 /* libCyberPlayerUtils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCyberPlayerUtils.a; sourceTree = "<group>"; };
+		27BEEC3A19F206DE003B4C29 /* libReachability.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libReachability.a; sourceTree = "<group>"; };
+		27BEEC3B19F206DE003B4C29 /* libSBJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSBJSON.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +394,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BEEC3319F20474003B4C29 /* Foundation.framework in Frameworks */,
+				27BEEC3119F20459003B4C29 /* QuartzCore.framework in Frameworks */,
+				27BEEC2F19F20408003B4C29 /* UIKit.framework in Frameworks */,
+				27BEEC3C19F206DE003B4C29 /* libASIHTTP.a in Frameworks */,
+				271B258B19F1FC3E009C2626 /* libbz2.dylib in Frameworks */,
+				271B258919F1FC31009C2626 /* SystemConfiguration.framework in Frameworks */,
+				27BEEC4619F206DE003B4C29 /* libSBJSON.a in Frameworks */,
+				271B258D19F209B7009C2626 /* libGzipCompressor.a in Frameworks */,
+				271B258719F1FC24009C2626 /* CFNetwork.framework in Frameworks */,
+				271B258519F1FC17009C2626 /* MobileCoreServices.framework in Frameworks */,
+				27BEEC3E19F206DE003B4C29 /* libBase64.a in Frameworks */,
+				271B258319F1FC0E009C2626 /* AudioToolbox.framework in Frameworks */,
+				271B258119F1FC05009C2626 /* libz.dylib in Frameworks */,
+				271B257F19F1FBEF009C2626 /* OpenGLES.framework in Frameworks */,
+				271B257D19F1FBDC009C2626 /* CoreGraphics.framework in Frameworks */,
+				271B257B19F1FBCD009C2626 /* OpenAL.framework in Frameworks */,
+				27BEEC4219F206DE003B4C29 /* libCyberPlayerUtils.a in Frameworks */,
+				27BEEC4019F206DE003B4C29 /* libCyberPlayerController.a in Frameworks */,
+				27BEEC4419F206DE003B4C29 /* libReachability.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +420,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BEEC4719F206DE003B4C29 /* libSBJSON.a in Frameworks */,
+				271B258E19F209B7009C2626 /* libGzipCompressor.a in Frameworks */,
+				27BEEC3F19F206DE003B4C29 /* libBase64.a in Frameworks */,
+				27BEEC3D19F206DE003B4C29 /* libASIHTTP.a in Frameworks */,
+				27BEEC4319F206DE003B4C29 /* libCyberPlayerUtils.a in Frameworks */,
+				27BEEC4119F206DE003B4C29 /* libCyberPlayerController.a in Frameworks */,
+				27BEEC4519F206DE003B4C29 /* libReachability.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +494,19 @@
 		185E773D19A2F14E00EE8AA8 = {
 			isa = PBXGroup;
 			children = (
+				27BEEC3419F206DE003B4C29 /* BaiduT5Player */,
+				27BEEC3219F20474003B4C29 /* Foundation.framework */,
+				27BEEC3019F20459003B4C29 /* QuartzCore.framework */,
+				27BEEC2E19F20408003B4C29 /* UIKit.framework */,
+				271B258A19F1FC3E009C2626 /* libbz2.dylib */,
+				271B258819F1FC31009C2626 /* SystemConfiguration.framework */,
+				271B258619F1FC24009C2626 /* CFNetwork.framework */,
+				271B258419F1FC17009C2626 /* MobileCoreServices.framework */,
+				271B258219F1FC0E009C2626 /* AudioToolbox.framework */,
+				271B258019F1FC05009C2626 /* libz.dylib */,
+				271B257E19F1FBEF009C2626 /* OpenGLES.framework */,
+				271B257C19F1FBDC009C2626 /* CoreGraphics.framework */,
+				271B257A19F1FBCD009C2626 /* OpenAL.framework */,
 				276185AA19F0FA2B0093AC21 /* AFNetworking */,
 				276185BE19F0FA2B0093AC21 /* UIKit+AFNetworking */,
 				185E774819A2F14E00EE8AA8 /* MyMangoTV */,
@@ -694,6 +779,21 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		27BEEC3419F206DE003B4C29 /* BaiduT5Player */ = {
+			isa = PBXGroup;
+			children = (
+				271B258C19F209B7009C2626 /* libGzipCompressor.a */,
+				27BEEC3519F206DE003B4C29 /* CyberPlayerController.h */,
+				27BEEC3619F206DE003B4C29 /* libASIHTTP.a */,
+				27BEEC3719F206DE003B4C29 /* libBase64.a */,
+				27BEEC3819F206DE003B4C29 /* libCyberPlayerController.a */,
+				27BEEC3919F206DE003B4C29 /* libCyberPlayerUtils.a */,
+				27BEEC3A19F206DE003B4C29 /* libReachability.a */,
+				27BEEC3B19F206DE003B4C29 /* libSBJSON.a */,
+			);
+			path = BaiduT5Player;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -956,6 +1056,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -996,6 +1097,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1014,9 +1116,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = "/Users/zhxf/Desktop/myTv/MyTV/MobileVLCKit-Universal/include";
 				INFOPLIST_FILE = MyMangoTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhxf/project/MyManggoTV/MobileVLCKit-Universal/lib",
+					/Users/zhxf/project/MyManggoTV/BaiduT5Player,
+					"$(PROJECT_DIR)/BaiduT5Player",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1026,9 +1136,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = "/Users/zhxf/Desktop/myTv/MyTV/MobileVLCKit-Universal/include";
 				INFOPLIST_FILE = MyMangoTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhxf/project/MyManggoTV/MobileVLCKit-Universal/lib",
+					/Users/zhxf/project/MyManggoTV/BaiduT5Player,
+					"$(PROJECT_DIR)/BaiduT5Player",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1047,6 +1165,12 @@
 				);
 				INFOPLIST_FILE = MyMangoTVTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhxf/project/MyManggoTV/MobileVLCKit-Universal/lib",
+					"$(PROJECT_DIR)/BaiduT5Player",
+					/Users/zhxf/project/MyManggoTV/BaiduT5Player,
+				);
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1063,6 +1187,12 @@
 				);
 				INFOPLIST_FILE = MyMangoTVTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhxf/project/MyManggoTV/MobileVLCKit-Universal/lib",
+					"$(PROJECT_DIR)/BaiduT5Player",
+					/Users/zhxf/project/MyManggoTV/BaiduT5Player,
+				);
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

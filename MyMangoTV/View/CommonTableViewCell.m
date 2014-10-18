@@ -67,6 +67,7 @@
 
 - (void)reloadData
 {
+
     //将scrollView上的所有子视图都移除掉
     [_scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     

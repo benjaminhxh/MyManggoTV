@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface PlayerViewController : UIViewController
 
 @property(nonatomic, copy)NSString *playerURL;
-
+@property(nonatomic, copy)NSString *playerTitle;
 @end
