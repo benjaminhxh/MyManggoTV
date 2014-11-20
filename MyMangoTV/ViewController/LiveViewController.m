@@ -135,6 +135,8 @@
     NSString *urlString = [channelListURLArr objectAtIndex:index];
     [[AFHTTPRequestOperationManager manager] POST:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         downloadArr = (NSArray *)responseObject;
+        NSDictionary *dict = [downloadArr objectAtIndex:0];
+        NSString *PlayUrl = [dict objectForKey:@"PlayUrl"];
         [livetableView reloadData];  //重新加载数据！！！
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -142,13 +144,14 @@
     }];
 
 }
+//播放按钮
 - (void)cliked:(UIButton *)sender
 {
     NSLog(@"%d",sender.tag);
     NSDictionary *dict = [downloadArr objectAtIndex:sender.tag];
 //    NSLog(@"dict:%@",dict);
     NSString *url = [dict objectForKey:kPlayUrl];
-//    NSLog(@"playurl:%@",url);
+    NSLog(@"playurl:%@",url);
     PlayerViewController *playerVC = [[PlayerViewController alloc] init];
     playerVC.playerURL = url;
     playerVC.playerTitle = [dict objectForKey:kChannelName];

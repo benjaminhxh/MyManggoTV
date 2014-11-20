@@ -134,6 +134,7 @@
     [cbPlayerController.view addGestureRecognizer:tapGest];
 
     [self startPlayback];
+    
 }
 
 - (void)onDragSlideValueChanged:(id)sender {
